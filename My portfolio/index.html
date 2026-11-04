@@ -44,7 +44,9 @@ developer, HTML"
         </p>
         <p>
           <a href="#contact">Send me a message</a> or
-          <a href="files/cv.pdf" download>download my CV</a>.
+          <a href="files/cv.pdf" download
+            >download my <abbr title="Curriculum Vitae">CV</abbr></a
+          >.
         </p>
         <button
           type="button"
@@ -81,6 +83,10 @@ developer, HTML"
           <source src="media/intro.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
+        <p>
+          My favourite tag is &lt;main&gt;, because it tells the browser where
+          the important content is &amp; helps screen readers.
+        </p>
       </section>
 
       <aside>
@@ -123,7 +129,7 @@ developer, HTML"
           <li>
             Web Development
             <ul type="circle">
-              <li>HTML</li>
+              <li><abbr title="HyperText Markup Language">HTML</abbr></li>
               <li>CSS (learning)</li>
               <li>JavaScript (next)</li>
             </ul>
@@ -139,7 +145,9 @@ developer, HTML"
         <h3>Skill Levels</h3>
 
         <p>
-          <label for="lvl-html">HTML</label>
+          <label for="lvl-html"
+            ><abbr title="HyperText Markup Language">HTML</abbr></label
+          >
           <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
         </p>
 
@@ -244,7 +252,11 @@ int main() {
       <section id="education">
         <h2>Education</h2>
         <h3>BSc in Software Engineering</h3>
-        <p>Addis Ababa Science and Technology University, 2024 – present</p>
+
+        <p>
+          Addis Ababa Science and Technology University,
+          <time datetime="2023-09">September 2023</time> – present
+        </p>
         <p>
           <label for="degree">Degree progress:</label>
           <progress id="degree" value="40" max="100">40%</progress> 40%
@@ -323,7 +335,7 @@ int main() {
 
         <p>
           Phone:
-          <a href="tel:+251967666525">+251967666525</a>
+          <a href="tel:+251967666525">+251&nbsp;967&nbsp;666&nbsp;525</a>
         </p>
 
         <p>
@@ -339,7 +351,9 @@ int main() {
         </p>
 
         <p>
-          <a href="files/cv.pdf" download>Download my CV (PDF)</a>
+          <a href="files/cv.pdf" download
+            >Download my <abbr title="Curriculum Vitae">CV</abbr>(PDF)</a
+          >
         </p>
 
         <h3>Connect with me</h3>
@@ -506,7 +520,8 @@ int main() {
       </section>
     </main>
     <footer>
-      <p>Copyright 2026 Abel Alem. All rights reserved.</p>
+      <p>&copy; 2026 Abel Alem. All rights reserved.</p>
+      <p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
     </footer>
   </body>
 </html>
