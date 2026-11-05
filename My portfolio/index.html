@@ -19,6 +19,7 @@ developer, HTML"
   </head>
   <body>
     <header>
+      <canvas id="logo" width="120" height="120"> Abel Alem logo </canvas>
       <h1>Abel Alem</h1>
 
       <img
@@ -172,8 +173,12 @@ developer, HTML"
         </p>
         <p>
           <label for="lvl-cpp">C++</label>
-          <meter id="lvl-cpp" value="0.7" min="0" max="1">60%</meter>
+          <meter id="lvl-cpp" value="0.7" min="0" max="1">70%</meter>
         </p>
+        <h3>My Skill Chart</h3>
+        <canvas id="skillChart" width="370" height="150">
+          A chart showing my skill levels
+        </canvas>
         <h3>My Learning Roadmap</h3>
         <ol type="1">
           <li>HTML structure and content</li>
@@ -214,7 +219,8 @@ developer, HTML"
             height="250"
           />
           <p>A system for managing books and borrowing records.</p>
-
+        </article>
+        <article>
           <h3>Personal Portfolio Website</h3>
           <p>A website that introduces me and showcases my projects.</p>
         </article>
@@ -523,5 +529,40 @@ int main() {
       <p>&copy; 2026 Abel Alem. All rights reserved.</p>
       <p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
     </footer>
+    <script>
+      const canvas = document.getElementById("logo");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "#1f5fa8";
+      ctx.fillRect(0, 0, 120, 120);
+
+      ctx.beginPath();
+      ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      ctx.fillStyle = "#1f5fa8";
+      ctx.font = "bold 36px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("AA", 60, 62);
+    </script>
+    <script>
+      const chart = document.getElementById("skillChart");
+      const chartCtx = chart.getContext("2d");
+
+      chartCtx.fillStyle = "#1f5fa8";
+      chartCtx.fillRect(20, 130 - 96, 50, 96);
+      chartCtx.fillText("HTML", 45, 145);
+
+      chartCtx.fillRect(110, 130 - 84, 50, 84);
+      chartCtx.fillText("Python", 135, 145);
+
+      chartCtx.fillRect(200, 130 - 24, 50, 24);
+      chartCtx.fillText("JavaScript", 225, 145);
+
+      chartCtx.fillRect(290, 130 - 70, 50, 70);
+      chartCtx.fillText("C++", 315, 145);
+    </script>
   </body>
 </html>
